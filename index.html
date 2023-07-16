@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <!-- sci2dec.js -->
-  <script src="./assets/js/onload.js"></script>
   <script src="./assets/js/sci2dec.js"></script>  
+  <script src="./assets/js/onload.js"></script>
+  <script src="./assets/js/copy.js"></script>
 </head>
 
 <body>
@@ -39,14 +40,14 @@
     <section class="textareas">
       <div class="textareas__block--left">
         <h2 class="textareas__block__header">Scientific (Exponential)</h2>
-        <textarea class="textareas__block__main" id="input" cols="30" rows="10" onInput="console.log('Hello'); document.getElementById('output').value=sci2dec(this.value)"></textarea>
+        <textarea class="textareas__block__main" id="input" cols="30" rows="10" onInput="document.getElementById('output').value=sci2dec(this.value)"></textarea>
       </div>
-      <div class="textareas__block--right">
+      <div class="textareas__block--right" id="right">
         <h2 class="textareas__block__header">Decimal</h2>
-        <textarea class="textareas__block__main" id="output" cols="30" rows="10" readonly></textarea>
         <!-- https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard -->
-        <a class="textareas__copy-button" onClick="let copyText = document.querySelector('#output'); copyText.select(); document.execCommand('copy');">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#24292F"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        <textarea class="textareas__block__main" id="output" cols="30" rows="10" readonly  onClick="copy()"></textarea>
+        <a class="textareas__copy-button" onClick="copy()">
+          <svg id="copybutton" fill="#24292F" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
         </a>
       </div>
     </section>
