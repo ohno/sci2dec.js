@@ -225,6 +225,7 @@ footer{
 .textareas__block--left, 
 .textareas__block--right {
   width: 50%;
+  z-index: 10;
 }
 
 @media screen and (max-width:840px) {
@@ -323,6 +324,24 @@ footer{
   bottom: 21px;
   right: 25px;
   position: absolute;
+}
+
+#arrow {
+  fill: #c6cdd5;
+  position: absolute;
+  left: 50%;
+  top: 247px;
+  width: 14px;
+  height: 14px;
+  z-index: 9;
+}
+
+@media screen and (max-width:840px) {
+  #arrow {
+    top: 360px;
+    left: calc(50% - 7px);
+    transform:rotate(90deg); 
+  }
 }
 
 .description {
