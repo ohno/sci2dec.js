@@ -107,11 +107,10 @@ header .logo {
   justify-content: center;
 }
 
-header .logo img{
+header .logo img {
   width: 28px;
   height: 28px;
-  padding-right: 2px;
-  padding-bottom: 1px;
+  padding-right: 3px;
 }
 
 header .logo h1 {
@@ -167,7 +166,7 @@ canvas {
   /* background: #F1F5F9; */
 }
 
-footer{
+footer {
   z-index: 2;
   position: relative;
   color: rgba(0, 0, 0, 0.54);
