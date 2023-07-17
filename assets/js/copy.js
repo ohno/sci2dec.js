@@ -18,6 +18,7 @@ function copy() {
   document.getElementById('right').appendChild(p);
   document.getElementById('copybutton').style.fill = "#00C8C8";
   setTimeout(function(){
+    window.getSelection().removeAllRanges();
     p.remove();
     document.getElementById('copybutton').style.fill = "#24292F";
   }, 1200);
